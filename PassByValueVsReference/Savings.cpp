@@ -6,6 +6,14 @@
 using namespace std;
 #include "Savings.h"
 
+// Create savings account in the heap
+Savings* newSavings(int nAccountNum) {
+	Savings* pS = new Savings;
+	pS->nAccountNumber = nAccountNum;
+	pS->dBalance = 0.0;
+	return pS;
+}
+
 // Two functions to compare passing by value and reference
 void someFunction(Savings s) {
 	cout << "Depositing 100, passing by value: " << endl;

@@ -24,5 +24,7 @@ public:
 		return dBalance;
 	}
 };
+
+Savings* newSavings(int nAccountNum);
 void someFunction(Savings s);
 void someFunction(Savings* pS);
