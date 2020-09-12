@@ -1,9 +1,10 @@
 #pragma once
 class Savings {
-public:
+protected:
 	int nAccountNumber;
 	double dBalance;
 
+public:
 	void init(int nAcountnum) {
 		nAccountNumber = nAcountnum;
 		dBalance = 0.0;
