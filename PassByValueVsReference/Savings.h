@@ -1,5 +1,6 @@
 #pragma once
 class Savings {
+	friend Savings* newSavings(int nAccountNum);
 protected:
 	int nAccountNumber;
 	double dBalance;
@@ -31,6 +32,5 @@ public:
 	}
 };
 
-Savings* newSavings(int nAccountNum);
 void someFunction(Savings s);
 void someFunction(Savings* pS);
