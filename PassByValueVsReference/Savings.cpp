@@ -7,7 +7,7 @@ using namespace std;
 #include "Savings.h"
 
 // Create savings account in the heap - as a friend
- Savings* newSavings(int nAccountNum) {
+Savings* newSavings(int nAccountNum) {
 	Savings* pS = new Savings;
 	pS->nAccountNumber = nAccountNum;
 	pS->dBalance = 0.0;
