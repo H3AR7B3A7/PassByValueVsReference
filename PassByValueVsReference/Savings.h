@@ -8,7 +8,8 @@ protected:
 
 public:
 	Savings() {		// Constructor: The 'right' way to set params on an object when created
-		int n = 0;
+		static int n = 0;
+		cout << "Created savings-account nr. " << n << endl;
 		init(n++);
 	}
 

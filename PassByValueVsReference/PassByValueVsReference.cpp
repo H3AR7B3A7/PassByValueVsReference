@@ -15,7 +15,7 @@ int main(int nNumberOfArgs, char* pszArgs[]) {
 	// Initializer for (re)setting an object
 	// s.init(0);  
 
-	// Object creation with constructor
+	// Object creation with constructor (in stack)
 	Savings s[5];
 
 	// Try both functions
@@ -27,6 +27,10 @@ int main(int nNumberOfArgs, char* pszArgs[]) {
 
 	// Check another object
 	cout << "Balance in main() for 2nd object= " << s[1].balance() << endl;
+
+	// Object creation with constructor (in heap)
+	cout << "Allocating another savings-account from the heap:" << endl;
+	Savings *pS = new Savings;
 
 	// To evaluate results
 	system("PAUSE");
