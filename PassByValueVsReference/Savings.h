@@ -1,12 +1,19 @@
 #pragma once
 class Savings {
-	friend Savings* newSavings(int nAccountNum);
+	friend Savings* newSavings(int nAccountNum);	// Unconventional way to create objects - bad practice - not OOP
+	// Friends can be used to set up relations between classes though...
 protected:
 	int nAccountNumber;
 	double dBalance;
 
 public:
-	void init(int nAcountnum) {
+	Savings() {		// Constructor: The 'right' way to set params on an object when created
+		int n = 0;
+		init(n++);
+	}
+
+	void init(int nAcountnum) {		// Another less conventional way to create objects
+		// But can be used to reset values when passed to constructor
 		nAccountNumber = nAcountnum;
 		dBalance = 0.0;
 	}

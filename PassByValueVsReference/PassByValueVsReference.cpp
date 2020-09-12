@@ -8,16 +8,25 @@ using namespace std;
 
 int main(int nNumberOfArgs, char* pszArgs[]) {
 	// Create savings account
+
+	// Manual object creation
 	// Savings s = { 0, 0.0 };
-	Savings s;
-	s.init(0);
+	
+	// Initializer for (re)setting an object
+	// s.init(0);  
+
+	// Object creation with constructor
+	Savings s[5];
 
 	// Try both functions
-	someFunction(s); // This won't work
-	cout << "Balance in main() = " << s.balance() << endl;
+	someFunction(s[0]); // This won't work
+	cout << "Balance in main() = " << s[0].balance() << endl;
 
-	someFunction(&s); // This will
-	cout << "Balance in main() = " << s.balance() << endl; 
+	someFunction(&s[0]); // This will
+	cout << "Balance in main() = " << s[0].balance() << endl; 
+
+	// Check another object
+	cout << "Balance in main() for 2nd object= " << s[1].balance() << endl;
 
 	// To evaluate results
 	system("PAUSE");
