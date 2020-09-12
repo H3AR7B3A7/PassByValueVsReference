@@ -4,6 +4,11 @@ public:
 	int nAccountNumber;
 	double dBalance;
 
+	void init(int nAcountnum) {
+		nAccountNumber = nAcountnum;
+		dBalance = 0.0;
+	}
+
 	double deposit(double dAmount) {
 		if (dAmount < 0) {
 			return 0.0;

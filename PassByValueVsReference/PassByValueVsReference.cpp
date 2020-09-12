@@ -8,7 +8,8 @@ using namespace std;
 
 int main(int nNumberOfArgs, char* pszArgs[]) {
 	// Create savings account
-	Savings s = { 0, 0.0 };
+	Savings s;
+	s.init(0);
 
 	// Try both functions
 	someFunction(s); // This won't work
