@@ -36,6 +36,8 @@ int main(int nNumberOfArgs, char* pszArgs[]) {
 	// Testing Destructor
 	Student *pStudent = fn();
 
+	// Destructor not invoked for for objects allocated off of the heap
+	// untill the pointer returned by fn() gets deleted:
 	cout << "Deleting the pointer returned by fn(): " << endl;
 	delete pStudent;
 	pStudent = 0;
