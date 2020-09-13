@@ -5,6 +5,7 @@
 #include <iostream>
 using namespace std;
 #include "Savings.h"
+#include "Student.h"
 
 int main(int nNumberOfArgs, char* pszArgs[]) {
 	// Create savings account
@@ -31,6 +32,15 @@ int main(int nNumberOfArgs, char* pszArgs[]) {
 	// Object creation with constructor (in heap)
 	cout << "Allocating another savings-account from the heap:" << endl;
 	Savings *pS = new Savings;
+
+	// Testing Destructor
+	Student *pStudent = fn();
+
+	cout << "Deleting the pointer returned by fn(): " << endl;
+	delete pStudent;
+	pStudent = 0;
+	
+
 
 	// To evaluate results
 	system("PAUSE");
