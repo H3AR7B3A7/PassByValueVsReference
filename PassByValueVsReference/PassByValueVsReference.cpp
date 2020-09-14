@@ -45,9 +45,11 @@ int main(int nNumberOfArgs, char* pszArgs[]) {
 	pStudent = 0;
 	
 	// Early binding is prefered by C++
+	cout << "Early binding is the default: " << endl;
 	testEarlyBinding();
 
 	// Late binding - 'virtual' keyword for polymorphism
+	cout << "Late Binding or polymorphism is OOP: " << endl;
 	testLateBinding();
 
 	// To evaluate results
