@@ -6,6 +6,8 @@
 using namespace std;
 #include "Savings.h"
 #include "Student.h"
+#include "Worker.h"
+#include "Manager.h"
 
 int main(int nNumberOfArgs, char* pszArgs[]) {
 	// Create savings account
@@ -42,7 +44,11 @@ int main(int nNumberOfArgs, char* pszArgs[]) {
 	delete pStudent;
 	pStudent = 0;
 	
+	// Early binding is prefered by C++
+	testEarlyBinding();
 
+	// Late binding - 'virtual' keyword for polymorphism
+	testLateBinding();
 
 	// To evaluate results
 	system("PAUSE");
